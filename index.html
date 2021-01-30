@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Posturize</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app-container">
+<div class="logo">
+    <img src="posturizeTEXT.png" alt="Posturize">
+</div>
+    <div class="pomodoro-app">
+        <div id="top" class="top">
+            <div class="wrapper">
+                <span id="status">Welcome</span>
+                <a id="settingsbtn" class="settingsbtn right" href="#"><i class="material-icons">settings</i></a>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="timer">
+                <div class="countdown"><span id="countdown">5:00</span></div>
+                <div class="controls">
+                    <a class="btn-floating side-btn" id="rs"><i class="material-icons">stop</i></a>
+                    <a class="btn-floating main-btn" id="pnp">
+                            <div class="play-button paused-button">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                                <div class="triangle-1"></div>
+                            <div class="triangle-2"></div>
+                        </div>
+                    </a>
+                    <a class="btn-floating side-btn" id="skip"><i class="material-icons">skip_next</i></a>
+                </div>
+                <div id="animation"></div>
+            </div>
+
+            <div id="settings" class="settings">
+                <div>
+                  <p class="range-field">
+                    <label for="focusLength">Focus</label>
+                    <input type="range" id="focusLength" min="1" max="10" value="5"/>
+                  </p>
+                  <div class="switch">
+                    <label>
+                        <span class="label">Animation</span>
+                        <input type="checkbox" name="animationswitch" id="animationswitch" checked="true">
+                        <span class="right lever"></span>
+                    </label>
+                  </div>
+                  <div class="switch">
+                    <label>
+                        <span class="label">Sound Notification</span>
+                        <input type="checkbox" name="notificationaudio" id="notificationaudio" checked="true">
+                        <span class="right lever"></span>
+                    </label>
+                  </div>
+                  <div class="switch">
+                      <label>
+                        <span class="label">Push Notification</span>
+                        <input type="checkbox" disabled="true" name="notificationPopup" id="notificationPopup">
+                        <span class="right lever"></span>
+                      </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
