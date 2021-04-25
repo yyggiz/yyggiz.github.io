@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Posturize</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'><link rel="stylesheet" href="./style.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./rainbow.css">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 
         <div class="main">
             <div class="timer">
-                <div class="countdown"><span id="countdown">5:00</span></div>
+                <div class="countdown"><span id="countdown">01:00</span></div>
                 <div class="controls">
                     <a class="btn-floating side-btn" id="rs"><i class="material-icons">stop</i></a>
                     <a class="btn-floating main-btn" id="pnp">
@@ -42,16 +42,9 @@
             <div id="settings" class="settings">
                 <div>
                   <p class="range-field">
-                    <label for="focusLength">Focus</label>
-                    <input type="range" id="focusLength" min="1" max="10" value="5"/>
+                    <label for="focusLength">Frequency</label>
+                    <input type="range" id="focusLength" min="1" max="10" value="1"/>
                   </p>
-                  <div class="switch">
-                    <label>
-                        <span class="label">Animation</span>
-                        <input type="checkbox" name="animationswitch" id="animationswitch" checked="true">
-                        <span class="right lever"></span>
-                    </label>
-                  </div>
                   <div class="switch">
                     <label>
                         <span class="label">Sound Notification</span>

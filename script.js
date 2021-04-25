@@ -92,7 +92,7 @@
 
 var pomodoroTimer = new (function() {
     var countdown, mode = 0, isRunning = false,
-		timeFocus = 150000, timeIncrements = 1000, timeNow = 0,
+		timeFocus = 6000, timeIncrements = 1000, timeNow = 0,
 		audio, audioLoad = false, audioPlay = true, tomatoAnimation = true,
 		updateSettings = true, previousState = "";
 
@@ -104,17 +104,10 @@ var pomodoroTimer = new (function() {
             timeNow -= timeIncrements / 10;
         }
 //CHANGE REST / FOCUS AT THE TOP
-		updateStatus = function(status) {
-			$("#status").html((status) ? status : (mode == 0) ? "Focus" : "FOCUS");
-		}
+
 // SWITCHES MODE, CALLS AUDIO FUNCTION
 		switchTimer = function() {
-			if(!mode) {
-				mode = 1; timeNow = timeFocus;
-			} else {
-				mode = 0; timeNow = timeFocus;
-			}
-			updateStatus(false);
+			timeNow = timeFocus;
 			audioNotification();
 		}
 //SKIP FUNCTION
@@ -156,7 +149,6 @@ var pomodoroTimer = new (function() {
 
 			$("#pnp").on("click", function() {
 				isRunning = (isRunning) ? false : true;
-				updateStatus(false);
 				$(".play-button").toggleClass("paused-button");
 				pomodoroTimer.Timer.toggle();
 				animation(isRunning);
@@ -164,7 +156,6 @@ var pomodoroTimer = new (function() {
 
 			$("#rs").on("click", function() {
 				isRunning = false;
-				updateStatus("Welcome");
 				resetCountdown(true);
 				$(".play-button").addClass("paused-button");
 				animation(isRunning);
